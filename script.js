@@ -35,29 +35,30 @@ document.addEventListener("DOMContentLoaded", function() {
             totalScore += parseInt(slider.value);
         });
 
-        // Vypočítáme průměrný bodový zisk
-        var averageScore = totalScore / sliders.length;
-
-        // Zjistíme výslednou známku na základě průměrného bodového zisku
+        // Zjistíme výslednou známku na základě součtu bodů
         var grade;
-        if (averageScore >= 65) {
+        if (totalScore >= 65) {
             grade = 'A';
-        } else if (averageScore >= 52) {
+        } else if (totalScore >= 52) {
             grade = 'B';
-        } else if (averageScore >= 39) {
+        } else if (totalScore >= 39) {
             grade = 'C';
-        } else if (averageScore >= 26) {
+        } else if (totalScore >= 26) {
             grade = 'D';
-        } else if (averageScore >= 13) {
+        } else if (totalScore >= 13) {
             grade = 'E';
         } else {
             grade = 'F';
         }
 
         // Zobrazíme výslednou známku
-        var resultElement = document.createElement("div");
-        resultElement.id = "result";
+        var resultElement = document.getElementById("result");
         resultElement.textContent = "Vaše výsledná známka je: " + grade;
-        form.appendChild(resultElement);
+
+        // Vyprázdníme hodnoty posuvníků
+        sliders.forEach(function(slider) {
+            slider.value = 0;
+            updateSliderValue(slider, slider.nextElementSibling);
+        });
     });
 });
