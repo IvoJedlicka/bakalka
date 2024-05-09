@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Zobrazíme výslednou známku
         var resultElement = document.getElementById("result");
-        resultElement.textContent = "Počet bodů: " + totalScore + ", Vaše výsledná známka je: " + grade;
+        resultElement.textContent = "Vaše výsledná známka je: " + grade;
 
         // Vyprázdníme hodnoty posuvníků
         sliders.forEach(function(slider) {
