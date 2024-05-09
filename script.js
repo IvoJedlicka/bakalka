@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
         var grade;
         if (totalScore >= 67) {
             grade = 'A';
-        } else if (totalScore >= 60) {
-            grade = 'B';
         } else if (totalScore >= 52) {
+            grade = 'B';
+        } else if (totalScore >= 39) {
             grade = 'C';
-        } else if (totalScore >= 45) {
+        } else if (totalScore >= 26) {
             grade = 'D';
-        } else if (totalScore >= 37) {
+        } else if (totalScore >= 13) {
             grade = 'E';
         } else {
             grade = 'F';
