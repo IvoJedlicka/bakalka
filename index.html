@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotazník</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <h1>Dotazník</h1>
+    <form id="questionnaire">
+        <div class="question">
+            <label for="question1">Otázka 1:</label>
+            <input type="range" id="question1" name="question1" min="0" max="5" step="1" value="0">
+            <span id="value1">0</span>
+        </div>
+        <!-- Přidejte další otázky zde podle potřeby -->
+        <div class="question">
+            <label for="question2">Otázka 2:</label>
+            <input type="range" id="question2" name="question2" min="0" max="5" step="1" value="0">
+            <span id="value2">0</span>
+        </div>
+        <!-- další otázky -->
+        <input type="submit" value="Odeslat">
+    </form>
 
-<h2>Dotazník pro hodnocení žáků</h2>
-
-<form id="surveyForm">
-  <label for="q1">1. Žák je aktivní a tvůrčí během vyučování.</label><br>
-  <input type="range" id="q1" name="q1" min="0" max="5"><br>
-  <!-- Repeat for all questions -->
-  <input type="submit" value="Odeslat">
-</form>
-
-<p id="grade"></p>
-
-<script>
-document.getElementById("surveyForm").onsubmit = function(event) {
-  event.preventDefault(); // prevent form from submitting and refreshing page
-  var totalScore = 0;
-  for (var i = 1; i <= 15; i++) {
-    totalScore += parseInt(document.getElementById("q" + i).value);
-  }
-  var grade;
-  if (totalScore >= 84) grade = "A";
-  else if (totalScore >= 66) grade = "B";
-  else if (totalScore >= 52) grade = "C";
-  else if (totalScore >= 28) grade = "D";
-  else if (totalScore >= 14) grade = "E";
-  else grade = "F";
-  document.getElementById("grade").innerText = "Známka: " + grade;
-};
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
