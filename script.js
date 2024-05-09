@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Zjistíme výslednou známku na základě průměrného bodového zisku
         var grade;
-        if (averageScore >= 4.5) {
+        if (averageScore >= 65) {
             grade = 'A';
-        } else if (averageScore >= 3.5) {
+        } else if (averageScore >= 52) {
             grade = 'B';
-        } else if (averageScore >= 2.5) {
+        } else if (averageScore >= 39) {
             grade = 'C';
-        } else if (averageScore >= 1.5) {
+        } else if (averageScore >= 26) {
             grade = 'D';
-        } else if (averageScore >= 0.5) {
+        } else if (averageScore >= 13) {
             grade = 'E';
         } else {
             grade = 'F';
