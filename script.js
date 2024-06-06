@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Zjistíme výslednou známku na základě součtu bodů
         var grade;
-        if (totalScore >= 67) {
+        if (totalScore >= 63) {
             grade = 'A';
-        } else if (totalScore >= 52) {
+        } else if (totalScore >= 50) {
             grade = 'B';
-        } else if (totalScore >= 39) {
+        } else if (totalScore >= 37) {
             grade = 'C';
-        } else if (totalScore >= 26) {
+        } else if (totalScore >= 24) {
             grade = 'D';
         } else if (totalScore >= 13) {
             grade = 'E';
